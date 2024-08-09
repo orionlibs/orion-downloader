@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.orionlibs</groupId>
-    <artifactId>project-name</artifactId>
-    <version>0.0.1</version>
-    <name>name</name>
-    <description>description</description>
-    <url>https://github.com/orionlibs/project-name</url>
+    <artifactId>orion-downloader</artifactId>
+    <version>1.0.0</version>
+    <name>Orion Downloader</name>
+    <description>Downloads specified URLs to the file system or to a stream</description>
+    <url>https://github.com/orionlibs/orion-downloader</url>
     
     
     <properties>
@@ -17,9 +17,9 @@
 
 
     <scm>
-        <url>https://github.com/orionlibs/project-name</url>
-        <connection>scm:git:https://github.com/orionlibs/project-name.git</connection>
-        <developerConnection>scm:git:ssh://github.com/orionlibs/project-name.git</developerConnection>
+        <url>https://github.com/orionlibs/orion-downloader</url>
+        <connection>scm:git:https://github.com/orionlibs/orion-downloader.git</connection>
+        <developerConnection>scm:git:ssh://github.com/orionlibs/orion-downloader.git</developerConnection>
     </scm>
 
 
@@ -177,7 +177,10 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
-                <version>9.1.0</version>
+                <version>10.0.3</version>
+                <configuration>
+                    <nvdApiServerId>nvdserver</nvdApiServerId>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
@@ -273,6 +276,13 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-inline</artifactId>
             <version>5.2.0</version>
+        </dependency>
+        
+        
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.17.2</version>
         </dependency>
     </dependencies>
 </project>
