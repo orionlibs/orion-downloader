@@ -1,5 +1,6 @@
 package io.github.orionlibs.downloader;
 
+import io.github.orionlibs.orion_object.ResourceCloser;
 import java.io.BufferedInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -25,8 +26,8 @@ class StreamToFileSaver
         }
         finally
         {
-            CloseResourceTask.closeResource(input);
-            CloseResourceTask.closeResource(fos);
+            ResourceCloser.closeResource(input);
+            ResourceCloser.closeResource(fos);
         }
     }
 }

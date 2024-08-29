@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.orionlibs</groupId>
     <artifactId>orion-downloader</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>Orion Downloader</name>
     <description>Downloads specified URLs to the file system or to a stream</description>
     <url>https://github.com/orionlibs/orion-downloader</url>
@@ -239,6 +239,13 @@
 
 
     <dependencies>
+        <dependency>
+            <groupId>io.github.orionlibs</groupId>
+            <artifactId>orion-object</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
